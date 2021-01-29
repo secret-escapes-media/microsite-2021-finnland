@@ -1,0 +1,53 @@
+- id: one
+  layer: "z-index: 13;"
+  title: Mehr als die Big Five
+  rotation: "transform: rotate(-5deg);"
+  description: "Auf einer Meer-Safari begegnen Sie neben Haien und Walen auch Delfinen, Robben und Pinguinen. Zurück an Land sind dann Antilopen und Giraffen ebenso allgegenwärtig wie Zebras. Hunderte von Vogel- und Schmetterlingsarten machen Südafrika attraktiv für jeden Tierfreund."
+
+- id: two
+  layer: "z-index: 12;"
+  title: "Safari das ganze Jahr über"
+  rotation: "transform: rotate(4deg);"
+  description: "Das ganze Jahr ist Safari-Zeit. Die europäischen Sommermonate eignen sich besonders für Wildtierbeobachtungen im Krüger Nationalpark oder der Wüstenlandschaft des Kgalagadi Transfrontier Nationalparks. Im südafrikanischen Frühjahr und Sommer (europäischer Herbst und Winter) ist der Addo Elephant National Park der richtige Ort."
+
+- id: three
+  layer: "z-index: 11;"
+  title: "Geführte Pirschfahrten"
+  rotation: "transform: rotate(-4deg);"
+  description: "Die klassische Safari findet im Fahrzeug statt, teilweise begleitet von Rangern. Die Ranger kennen sich aus und wissen, wo sich die Tiere aufhalten – so können bei einer geführten Tour meist mehr Tiere entdeckt werden."
+
+- id: four
+  layer: "z-index: 14;"
+  title: "Self-Drive"
+  rotation: "transform: rotate(5deg);"
+  description: "Es ist auch möglich, selbstständig auf die Pirsch zu gehen, dies ist jedoch nur auf vorgeschriebenen Wegen in den Nationalparks möglich. Private Wildparks sind von dieser Regelung ausgeschlossen. Ein Self-Drive ermöglicht es, die südafrikanische Tierwelt ganz ohne vorgeschriebene Zeitpläne im eigenen Rhythmus zu entdecken."
+
+- id: five
+  layer: "z-index: 15;"
+  title: "Walking Safari"
+  rotation: "transform: rotate(-3deg);"
+  description: "Sie möchten den Tieren auf Augenhöhe begegnen? Eine Buschwanderung zu Fuß ist das Richtige. Ein bewaffneter Ranger begleitet Sie und weist Sie in die Kunst des Spurenlesens ein. Je nach Angebot können Sie im Freien campen, von Fahrzeugen begleitet werden, die die Ausrüstung transportieren oder von ihrem Camp aus Tages- oder Halbtageswanderungen unternehmen."
+
+- id: six
+  layer: "z-index: 16;"
+  title: "Staatliche Nationalparks"
+  rotation: "transform: rotate(5deg);"
+  description: "In Südafrika finden sich 19 Nationalparks, die von einer Reihe staatlicher Naturreservate ergänzt werden, die in KwaZulu-Natal und der North West Province lokal gemanagt werden. Eintrittskosten und Übernachtungspreise in den Restcamps (Chalets und Bungalows zur Selbstverpflegung) sind sehr moderat gehalten, auch als Individualreisende kann man die Parks erkunden."
+
+- id: seven
+  layer: "z-index: 17;"
+  title: Private Game Reserves
+  rotation: "transform: rotate(-3deg);"
+  description: "In einer der vielen privaten Game Lodges können Sie eine Pirschfahrt mit einem Aufenthalt in einer herrlichen Lodge oder im Luxuszelt samt Dinner am Lagerfeuer erleben. Bei den Pirschfahrten können die Ranger oftmals von den vorgeschriebenen Wegen abfahren und den Tieren so näher kommen. Meistens sind zwei geführte Fahrten pro Tag im Preis inbegriffen."
+
+- id: eight
+  layer: "z-index: 18;"
+  title: Staatliche Camps
+  rotation: "transform: rotate(2deg);"
+  description: "Sollte das Reisebudget nicht ganz so üppig ausfallen, können Sie auch einen Aufenthalt in einem staatlichen Camp auswählen. Die Unterkünfte sind meist etwas rustikaler, auch um die Verpflegung müssen Sie sich selbst kümmern. Das Besondere an dieser Art von Safari ist, dass Sie direkt im Park übernachten können."
+
+- id: nine
+  layer: "z-index: 19;"
+  title: Aus einer anderen Perspektive
+  rotation: "transform: rotate(5deg);"
+  description: "Sie möchten eine Safari der besonderen Art genießen? Wie wäre es mit einer Safari auf dem Pferderücken oder im Heißluftballon? Im Ballon können Sie nicht nur von oben die Tiere in ihrem natürlichen Lebensraum bestaunen, sondern Sie bekommen auch ein fantastisches 360° Panorama auf die fantastische Landschaft geboten."

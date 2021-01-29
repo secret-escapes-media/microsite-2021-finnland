@@ -1,0 +1,18 @@
+
+
+{% for section in page.sections %}
+
+<div class="">
+  <div class="harvey {% cycle ' harvey--swap', '' %}">
+
+    <div  class="harvey__img img" style="background-image:url({{site.img}}/pages/{{page.id}}/highlight{{forloop.index}}.jpg);" ></div>
+
+
+      <div class="harvey__text text--left hpad--xl">
+        <h3 class="h h--md bv-divider text--pink">{{section.title}}</h3>
+          <div class="space--sm"></div>
+        <div class="text--lg">{{section.description}}</div>
+      </div>
+  </div>
+</div>
+{% endfor %}

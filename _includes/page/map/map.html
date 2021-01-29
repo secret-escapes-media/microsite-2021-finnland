@@ -1,0 +1,286 @@
+
+
+<script >
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaGFtaXNoamdyYXkiLCJhIjoiY2pkbjBmeGN6MDd1YzMzbXI3cWdpNThjayJ9.3YE8T1H2QUyqNIkxdKWxkg';
+
+  var map = new mapboxgl.Map({
+      container: 'map',
+      // style: 'mapbox://styles/hamishjgray/ckjiib2etgy3319p3fgat1hcl',
+      style:'mapbox://styles/hamishjgray/ck5w7upie5qdr1iqx8ks3odsf',
+      // style: 'mapbox://styles/hamishjgray/cjqfg2s4y0h3t2sq3u9ziyxif',
+      //center: [35.976324, 63.718841],
+      zoom: 4.5,
+      minZoom: 3,
+      maxZoom: 4.5
+
+    });
+
+  //console.log(map);
+  var cssWidth = window.innerWidth;
+  //  console.log(cssWidth);
+
+
+
+      map.fitBounds([[
+                  15.976324,
+                  58.2379
+              ], [
+                  40.976324,
+                  70.718841
+            ]]);
+
+
+
+
+
+
+  var nav = new mapboxgl.NavigationControl();
+  map.addControl(nav, 'bottom-left');
+
+
+  map.on('load', function() {
+    // Insert the layer beneath any symbol layer.
+    var layers = map.getStyle().layers;
+
+    var labelLayerId;
+    for (var i = 0; i < layers.length; i++) {
+    if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+      labelLayerId = layers[i].id;
+      break;
+      }
+    }
+
+    });
+
+
+
+    // code from the next step will go here!
+    var geojson = {
+      type: 'FeatureCollection',
+      features: [
+
+
+//************** forest ************
+
+
+{
+  type: 'Feature',
+  geometry: {
+    type: 'Point',
+    coordinates: [24.590654, 60.277808]
+  },
+  properties: {
+    id: '1',
+    cat: 'map-one',
+    title: 'Nuuksio-Nationalpark',
+    link: 'kulinarik/#one',
+    description: 'Einen Steinwurf von Helsinki entfernt ist der Nuuksio-Nationalpark, wo sich Wälder mit Mooren und Seen abwechseln.'
+  }
+},
+{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [24.133333, 67.966667]
+    },
+    properties: {
+      id: '2',
+      cat: 'map-one',
+      title: 'Pallas-Yllästunturi Nationalpark',
+      link: 'kulinarik#one',
+      description: 'Die sauberste Luft der Welt atmen Sie in den Taigawäldern des Pallas-Yllästunturi Nationalparks, die Landschaft wurde als finnische Nationallandschaft verewigt. '
+    }
+  },
+{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [28.911656, 64.884111]
+    },
+    properties: {
+      id: '3',
+      cat: 'map-one',
+      title: 'Hossa',
+      link: 'kulinarik/#one',
+      description: 'Urwälder sind im neuesten Nationalpark zu finden, Hossa, eröffnet im Juni 2017, dazu Canyon-Seen und Felsbilder.'
+    }
+  },
+
+
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [29.800000, 63.100000]
+          },
+          properties: {
+            id: '4',
+            cat: 'map-one',
+            title: 'Koli-Nationalark',
+            link: 'tokio/#four',
+            description: 'Im Koli-Nationalark hat das Panorama vom Ukko-Koli-Berg über den Pielinen-See viele finnische Künstler inspiriert. '
+          }
+        },
+          {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [29.322234, 66.374572]
+          },
+          properties: {
+            id: '5',
+            cat: 'map-one',
+            title: 'Oulanka-Nationalpark',
+            link: 'outdoor/#one',
+            description: 'Stromschnellen sind etwas für Sie? Dann auf zum  in Südlappland, wo mit dem Karhunkierros Trail auch die beliebteste Wanderroute des Landes wartet.'
+            }
+          },
+          {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [22.264278, 59.998987]
+            },
+            properties: {
+              id: '6',
+              cat: 'map-one',
+              title: 'Schärenmeer',
+              img: 'outdoor/photos/three-1',
+              link: 'outdoor/#three',
+              description: 'An der Südwestküste Finnlands erstreckt sich das Schärenmeer mit Abertausenden Eilanden, den Schären, von wenigen Quadratmetern bis zu einigen Quadratkilometern groß.'
+            }
+          },
+
+
+    //************** lakes ************
+
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [28.210073, 61.261267]
+    },
+    properties: {
+      id: '1',
+      cat: 'map-two',
+      title: 'Saimaa-See',
+      link: 'tokio/#four',
+      description: 'Der Saimaa-See ist ein Gigant mit Tausenden von Inseln und 14.000 km an Küste. Er verbindet mehrere Großstädte der Seenplatte.'
+    }
+  },
+    {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [25.379112, 61.508114]
+    },
+    properties: {
+      id: '2',
+      cat: 'map-two',
+      title: 'Päijänne',
+      link: 'outdoor/#one',
+      description: 'im Mittelpunkt des gleichnamigen Nationalparks können Sie im kristallklaren Wasser des tiefsten See Finnlands Erfrischung finden.'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [26.972942, 64.453815]
+      },
+      properties: {
+        id: '3',
+        cat: 'map-two',
+        title: 'Oulujärvi-See',
+        link: 'outdoor/#three',
+        description: 'Schwimmen, Boot, Wasserski - der Oulujärvi-See erfüllt alle liquiden Wünsche. Mitten im See: die Insel Manamansalo, Nadelwälder und Sandstrände.'
+      }
+    },
+
+
+        //************** parks ************
+
+
+
+    //************** animals ************
+
+
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [29.520283, 64.128748]
+      },
+      properties: {
+        id: '1',
+        cat: 'map-four',
+        title: 'Bär gesucht?',
+        link: 'tradition/#two',
+        description: 'Die östlichen Grenzgebiete Finnlands eignen sich gut dafür, Braunbären in natürlichem Umfeld zu beobachten. '
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [21.564278, 60.298987]
+      },
+      properties: {
+        id: '2',
+        cat: 'map-four',
+        title: 'Seeadler',
+        link: 'kulinarik/#two',
+        description: 'Nicht mehr vom Aussterben bedroht sind die Seeadler, die die weite Schärenküste sehr oft beehren. '
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [26.633262, 68.383856]
+      },
+      properties: {
+        id: '3',
+        cat: 'map-four',
+        title: 'Rentiere',
+        //img: 'tradition/photos/three-1',
+        link: 'tradition/#three',
+        description: 'Wo sonst, als in Lappland treffen Sie auf Rentiere? Auch Auerhühner und Lemminge haben ihre Heimat im hohen Norden. '
+      }
+    }
+  ]
+};
+
+
+    	// add markers to map
+    geojson.features.forEach(function(marker) {
+
+      // create a HTML element for each feature
+      var el = document.createElement('a');
+      //el.innerHTML = 'onlick';
+
+      //document.body.appendChild(el);
+      el.className = 'bv-show marker marker--'+marker.properties.cat;
+      el.id = marker.properties.cat+marker.properties.id;
+
+      //console.log(marker.properties.cat)
+    	//alert(marker.properties.id);
+
+      // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+
+     .setHTML('<div class="bv-popup-img bg-img--4-3" style="background-image: url({{site.img}}/pages/naturerlebnisse/'+marker.properties.cat+'-'+marker.properties.id+'.jpg); "></div><div class="hpad--sm vpad--sm"><div class=" h h--xxxs text--black text--bold text--upper text--left" >' + marker.properties.title + '</div><div class="space--xxs"></div><div class="p p--justify p--md">' + marker.properties.description + '</div><div class="space--xxs"></div></div>'))
+
+
+
+      /**/
+      .addTo(map);
+
+
+
+    });
+
+</script>

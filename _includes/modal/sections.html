@@ -1,0 +1,35 @@
+<!--
+  creates modals for all of the sections that appear on the single page
+  creates a series modal so user can nav between each poi in the current section
+  will also load in normal modals that appear in /data/modals.yml
+-->
+
+<div class="js-modal modal__bg is-closed">
+  <div class="modal__wrap">
+
+
+    {% for section in page.sections %}
+      {% for poi in section.pois.items %}
+
+        <div class="modal modal--series is-closed" data-modal-id="{{poi.id}}" data-modal-group="{{section.id}}">
+          <div class="js-close-modal modal__close"></div>
+          <div class="js-modal-nav modal__nav modal__nav--next" data-nav-direction="next"></div>
+          <div class="js-modal-nav modal__nav modal__nav--previous" data-nav-direction="previous"></div>
+          <div class="img img--16-9" style="background-image: url('{{site.img}}/pages/{{page.id}}/section-{{section.id}}-{{forloop.index}}.jpg');">
+
+          </div>
+          <div class="modal__content content-spacing text--xxl">
+            <h3 class="title title--md text--bolder">{{forloop.index}}. {{poi.title}}</h3>
+            <p>{{poi.content}}</p>
+            <div class="space--md"></div>
+          </div>
+        </div>
+
+      {% endfor %}
+    {% endfor %}
+
+
+
+
+  </div>
+</div>

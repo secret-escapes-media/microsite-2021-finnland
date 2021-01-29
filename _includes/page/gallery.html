@@ -1,0 +1,35 @@
+
+
+
+{% for section in page.sections %}
+{% if section.type == 'gallery'  %}
+<div class="bv-parallax " style="background-image:url({{site.img}}/pages/{{page.id}}/section-{{section.id}}.jpg); background-repeat:no-repeat; background-size:cover;">
+  <div class="container vpad--xxxxl">
+    <div class="boxpad--xl text--center theme--dark">
+      <h3 class="h h--lg bv-divider">{{section.title}}</h3>
+     <div class="space--xs"></div>
+     <div class="width width--lg  p--xxl h--serif text--italic">{{section.intro}}</div>
+      <div class="space--lg"></div>
+    </div>
+  </div>
+
+</div>
+<div class="bg--grey-lightest">
+  <div class="container vpad--lg">
+    <div class="col col--12">
+      <div class="boxpad--sm ">
+        <div class="row">
+          {% for poi in section.pois.items %}
+          <div class="col col--4">
+            <div id="tracking-poi-{{poi.id}}" class="img img--4-3 depth--md rounded--sm js-open-modal" data-open-modal="{{poi.id}}" style="background-image: url('{{site.img}}/pages/{{page.id}}/section-{{section.id}}-{{forloop.index}}.jpg'); ">
+              <div class="img__bg-overlay h h--xs img__content theme--dark">{{forloop.index}}. {{poi.title}}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div> <!-- /.row  -->
+  </div> <!-- /.container  -->
+</div> <!-- /.bg--grey-lightest  -->
+          {% endif %}
+{% endfor %}

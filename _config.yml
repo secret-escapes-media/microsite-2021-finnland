@@ -1,0 +1,26 @@
+# Site settings
+title: Finnland
+locale: de
+partner:
+  name: Client Name
+  link: "#client-name"
+
+description: >
+  Finnland muss man einfach lieben. Das Land der Mitternachtssonne und der eigentümlichen Sprache ist perfekt, wenn Sie viel für Wälder und Seen übrig haben, wenn Sie sich gesund ernähren, gesund schwitzen und einfach auf das Wesentliche besinnen möchten.
+
+
+
+# file paths
+url:     "https://mp.secretescapes.com" # the base hostname & protocol for your site
+baseurl: "/de/2021/finnland" # the subpath of your site, e.g. /blog/
+img:     "/de/2021/finnland/_assets/img"
+css:     "/de/2021/finnland/_assets/css"
+js:      "/de/2021/finnland/_assets/js"
+
+# Build settings
+markdown: kramdown
+exclude: [node_modules, gulpfile.js, package.json, package-lock.json, js/script.js]
+keep_files: [_assets]
+sass:
+    sass_dir: css
+    style: compressed

@@ -1,0 +1,91 @@
+---
+layout: page
+id: overview
+nav: true
+nav-order: 1
+title: Übersicht
+intro: "Finnland muss man einfach lieben. Das Land der Mitternachtssonne und der eigentümlichen Sprache ist perfekt, wenn Sie viel für Wälder und Seen übrig haben, wenn Sie sich gesund ernähren, gesund schwitzen und einfach auf das Wesentliche besinnen möchten. Entdecken Sie die finnische Lebensweise und planen Sie Ihren endlosen Sommer 2021 in Suomi."
+
+banner:
+  title: Finnland
+  title-sub: Wo das Glück zuhause ist
+  bg-pos: "background-position: 90% center;"
+  opacity: "opacity: .9;"
+  padding: "padding:8px;"
+
+funfacts:
+
+  - title: "...dass 'Sauna' das einzige finnische Wort ist, was es in andere Sprachen geschafft hat?"
+    id: one
+    link: sauna
+
+  - title: "...dass mehr Heavy Metal Bands aus Finnland kommen, als aus jedem anderen Land?"
+    id: two
+
+  - title: "...dass Finnen beim Saunieren gerne Würstchen grillen?"
+    id: three
+    link: sauna
+
+  - title: "...dass vor Finnlands Küste hunderttausende Inseln in der Ostsee liegen?"
+    id: four
+    link: naturerlebnisse
+
+  - title: "...dass Finnland die größte Seenfläche Europas zu bieten hat?"
+    id: five
+    link: naturerlebnisse
+
+  - title: "...dass die Finnen mehr Kaffee trinken als jede andere Nation?"
+    id: six
+    link: lifestyle
+
+  - title: "...warum die Finnen als die glücklichsten Menschen bezeichnet werden?"
+    id: seven
+    link: lifestyle
+
+  - title: "...dass Finnen sich gerne in ihrer Unterwäsche mit einem Drink in der Hand entspannen? Sie nennen es Kalsarikännit."
+    id: eight
+
+  - title: "...dass in Finnland Meisterschaften im Hobby Horsing, dem Reiten auf Steckenpferden populär sind?"
+    id: nine
+
+---
+
+{% include page/intro.html %}
+
+<div class="container vpad--xxl ">
+
+  <h2 class="text--center h h--lg bv-divider text--pink">Wussten Sie schon...</h2>
+
+  <div class="space--lg"></div>
+  {% for fact in page.funfacts %}
+
+  <div class="bob  {% cycle '', 'bob--swap' %} ">
+    <div class="bob__img">
+      <div class="img img--4-3" style="background-image: url('{{site.img}}/pages/overview/{{fact.id}}.jpg');" ></div>
+    </div>
+    <div class="bob__text">
+      <h3 class="h h--sm">{{fact.title}}</h3>
+
+      <div class="space--lg"></div>
+      {% if fact.link  %}
+      <a href="{{site.baseurl}}/{{fact.link}}" class="btn btn--md btn--blue" >Jetzt entdecken</a>
+      {% endif %}
+
+          {% if fact.id == 'eight' %}
+          <a href="{{site.img}}/pages/{{page.id}}/eight.mp3" class="js-audio-player btn btn--md btn--blue">Aussprache anhören</a>
+
+          <audio id="audio-player-{{video.id}}">
+            <source src="{{site.img}}/pages/{{page.id}}/eight.mp3" type="audio/mpeg">
+            <source src="{{site.img}}/pages/{{page.id}}/eight.ogg" type="audio/ogg">
+          </audio>
+          {% endif %}
+
+        </div>
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+
+{% include page/promo-offers.html %}

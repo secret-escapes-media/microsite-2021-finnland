@@ -1,0 +1,44 @@
+
+
+
+{% for section in page.sections %}
+{% if section.type == 'articles'  %}
+<div class="bv-parallax " style="background-image:url({{site.img}}/pages/{{page.id}}/section-{{section.id}}.jpg); background-repeat:no-repeat; background-size:cover; ">
+  <div class="container vpad--xxxxl">
+    <div class="boxpad--xl text--center theme--dark">
+      <h3 class="h h--lg bv-divider">{{section.title}}</h3>
+     <div class="space--xs"></div>
+     <div class="width width--lg  p--xxl h--serif text--italic">{{section.intro}}</div>
+      <div class="space--lg"></div>
+    </div>
+  </div>
+
+</div>
+<div class="bg--grey-lightest">
+  <div class="container vpad--lg">
+    <div class="col col--12">
+
+      <div class="boxpad--sm ">
+        <div class="row row--sm-4-4-4 row--sm-6-6 row--gutters " >
+
+          {% for poi in section.pois.items %}
+          <div class="col col--4">
+
+            <div  class="img img--16-9 rounded--sm" style="background-image: url('{{site.img}}/pages/{{page.id}}/section-{{section.id}}-{{forloop.index}}.jpg');">
+              <div class="img__bg-overlay-light h h--xs img__content theme--dark" >{{poi.title}}</div>
+            </div>
+
+            <div class="space--sm"></div>
+            <div class="p p--xl">{{poi.content}}</div>
+          </div>
+
+
+          {% endfor %}
+        </div>
+      </div>
+
+    </div> <!-- /.row  -->
+  </div> <!-- /.container  -->
+</div> <!-- /.bg--grey-lightest  -->
+{% endif %}
+{% endfor %}

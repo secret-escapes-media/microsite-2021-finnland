@@ -1,0 +1,415 @@
+
+/* ==========================================================================
+Map
+========================================================================== */
+$newBP: $xxl - $sm/2;
+
+
+
+
+#map {
+
+  display: block;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 70vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @include bp($lg){
+    //background-color: $bv-red;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 70vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;}
+
+
+  @include bp($xxl){
+    //background-color: $bv-red;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 85vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;}
+
+}
+
+.bv-reverse-col {
+    flex-direction: row-reverse;
+  @include bp($xl){
+    flex-direction: colunn;
+  }
+}
+
+.bv-highlights-wrap{
+    display: block;
+  @include bp($lg) {  display: none;  }
+}
+
+.bv-highlights-section{
+  position: relative;
+}
+
+.map {
+
+  position: relative;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: flex-start;
+  //min-height: 650px;
+
+}
+
+$icon-border: 0px $black solid;
+$icon-border-white: 0px $white solid;
+$icon-marker-size: 4em;
+$icon-marker-hover: 4em;
+
+.marker {
+
+    content: "";
+    display: inline-block;
+    height: $icon-marker-size;
+    width: $icon-marker-size;
+    vertical-align: middle;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: contain;
+    border: $icon-border-white;
+    border-radius: 50%;
+
+    &--map-one  {  background-image: url( "../img/icons/map-one.svg" ); z-index: 5;}
+    &--map-one:hover  { z-index: 10;  background-image: url( "../img/icons/map-one.svg" ); width:$icon-marker-hover; height:$icon-marker-hover; border: $icon-border; }
+    &--map-two  {  background-image: url( "../img/icons/map-two.svg" ); z-index: 6;}
+    &--map-two:hover  { z-index: 10;  background-image: url( "../img/icons/map-two.svg" ); width:$icon-marker-hover; height:$icon-marker-hover; border: $icon-border; }
+    &--map-three  {  background-image: url( "../img/icons/map-three.svg" );  z-index: 7;}
+    &--map-three:hover  { z-index: 10; background-image: url( "../img/icons/map-three.svg" ); width:$icon-marker-hover; height:$icon-marker-hover; border: $icon-border; }
+    &--map-four  {  background-image: url( "../img/icons/map-four.svg" ); z-index: 8; }
+    &--map-four:hover  { z-index: 10;  background-image: url( "../img/icons/map-four.svg" ); width:$icon-marker-hover; height:$icon-marker-hover; border: $icon-border;}
+}
+
+
+.bv-toggle{
+
+  cursor: pointer;
+  width: 25%;
+  text-align: center;
+  width: 25%;
+  margin: 4px 3vw -1px;
+  background-position: center 93%;
+  background-size: 55%;
+  opacity: .4;
+
+    @include bp($md) {
+      cursor: pointer;
+      width: 78px;
+      margin: 8px 3px -8px;
+      background-position: center 90%;
+      background-size: 55%;
+  }
+ }
+
+
+.bv-toggle-active{
+  cursor: pointer;
+  text-align: center;
+  width: 25%;
+  margin: 4px 3vw -1px;
+  background-position: center 93%;
+  background-size: 55%;
+  opacity: 1;
+
+    @include bp($md) {
+      cursor: pointer;
+      width: 78px;
+      margin: 8px 3px -8px;
+      background-position: center 90%;
+      background-size: 55%;
+    }
+
+}
+
+.bv-border  {
+  border-right: 1px solid $white;
+  //border-right: 1px solid $grey-lighter;
+  height: 82px;
+  margin: 15px 12px 15px;
+  vertical-align: middle;
+}
+
+.bv-icon {
+ //border-right: 2px solid $grey-lightest;
+}
+
+
+
+
+/* Tabs mit radio-Buttons */
+#tab1:checked ~ figure .tab1,
+#tab2:checked ~ figure .tab2,
+#tab3:checked ~ figure .tab3 { display: block; }
+.tabbed figure {
+   display: block;
+   margin-left: 0;
+   clear: both;
+}
+
+
+.tabbed { width: 100%;}
+.tabbed > input,
+.tabbed figure > div { display: none; }
+
+.tabbed figure>div {
+
+  background: #fff;
+  line-height: 1.5em;
+  letter-spacing: 0.3px;
+  color: #444;
+}
+
+
+nav {
+  background: $grey-lighter;
+  width: 100%;
+}
+nav label {
+   float: left;
+   text-align: center;
+   padding: 15px 15px;
+   background: $grey-lighter;
+   width: 120px;
+   opacity: 0.5;
+
+}
+
+nav label:hover { background: $vf-blue; opacity: 1; }
+nav label:active { background: #ffffff; opacity: 1;}
+
+#tab1:checked ~ nav label[for="tab1"],
+#tab2:checked ~ nav label[for="tab2"],
+#tab3:checked ~ nav label[for="tab3"] {
+  background: white;
+  color: #111;
+   opacity: 1;
+  position: relative;
+  border-bottom: none;
+}
+
+#tab1:checked ~ nav label[for="tab1"]:after,
+#tab2:checked ~ nav label[for="tab2"]:after,
+#tab3:checked ~ nav label[for="tab3"]:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -1px;
+}
+
+
+$icon-size: 48px;
+$icon-border-radius: 56px;
+
+.bv-map-one::before {
+  background: url("../img/icons/map-one.svg") no-repeat;
+  //border:  $icon-border;
+  content: '';
+  display: inline-block;
+  margin-top: 5px;
+  //margin-bottom: -4px;
+  //border-radius: $icon-border-radius;
+  height: $icon-size;
+  width: $icon-size;
+}
+
+.bv-map-two::before {
+  background: url("../img/icons/map-two.svg") no-repeat;
+  //border:  $icon-border;
+  content: '';
+  display: inline-block;
+  margin-top: 5px;
+  //margin-bottom: -4px;
+  //border-radius: $icon-border-radius;
+  height: $icon-size;
+  width: $icon-size;
+}
+
+.bv-map-three::before {
+  background: url("../img/icons/map-three.svg") no-repeat;
+  //border:  $icon-border;
+  content: '';
+  display: inline-block;
+  margin-top: 5px;
+  //margin-bottom: -4px;
+  //border-radius: $icon-border-radius;
+  height: $icon-size;
+  width: $icon-size;
+}
+
+.bv-map-four::before {
+  background: url("../img/icons/map-four.svg") no-repeat;
+  //border:  $icon-border;
+  content: '';
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  //border-radius: $icon-border-radius;
+  height: $icon-size;
+  width: $icon-size;
+}
+
+$popup-border-radius: 8px;
+
+.bv-legend-wrap{
+
+  position: absolute;
+  //border-radius: $popup-border-radius/1.2;
+  display: flex;
+  //width: 85vw;
+  margin: 10px 10px ;
+  padding: 6px 0px 8px 0;
+  //background-color: rgba($white, 1);
+  //box-shadow: 0 0px 2px rgba($black, 0.2);
+  z-index: 50;
+
+    @include bp($lg) {
+      //border-radius: $popup-border-radius;
+      position: absolute;
+      display: flex;
+      margin: auto;
+      padding: 10px 10px 20px 10px;
+      border-bottom: 1px $grey-lightest solid;
+      top: 0px;
+      right: 0px;
+      //min-width: 400px;
+      width: 50%;
+      height: 100%;
+      //margin-left: 3px;
+      //width: 300px;
+      background-color: rgba($white, 1);
+      //box-shadow: 0 0px 5px rgba($black, 0.3);
+      z-index: 50;
+    }
+}
+
+.bv-content-wrap{
+
+  position: absolute;
+  //border-radius: $popup-border-radius/1.2;
+  display: flex;
+  width: 85vw;
+  margin: 50px 10px 0;
+  padding: 6px 0px 8px 0;
+  background-color: rgba($black, 1);
+  //box-shadow: 0 0px 2px rgba($black, 0.2);
+  z-index: 20;
+
+    @include bp($newBP) {
+      //border-radius: $popup-border-radius;
+      position: absolute;
+      display: flex;
+      margin: auto;
+      padding: 0px 11px 12px 8px;
+      top: 135px;
+      right: 0px;
+      //min-width: 400px;
+      width: 50%;
+      height: 73vh;
+      background-color: rgba($white, 1);
+      //box-shadow: 0 0px 5px rgba($black, 0.3);
+      z-index: 19;
+    }
+}
+
+
+
+.bv-popup-wrap{
+  padding:0;
+}
+
+.bv-popup-img{
+    //padding-top: 25%;
+    padding-bottom: 55%;
+    margin: 0px!important;
+    vertical-align: middle;
+    background-size: cover;
+    background-color: $grey;
+    border-top-left-radius: $popup-border-radius;
+    border-top-right-radius: $popup-border-radius;
+  }
+
+
+
+.mapboxgl-canvas{
+  height: 100%!important;
+}
+
+.mapboxgl-popup {
+    width: 400px;
+    z-index: 19;
+    line-height: 1.3;
+    //border-radius: 4px;
+}
+
+@media only screen and (max-width: 450px) {
+
+.mapboxgl-popup {
+  position: absolute;
+  top: 62%!important;
+  width: 100%!important;
+  //height: 100%!important;
+  padding: 10px!important;
+  transform: translate(0%, -50%)!important;
+  z-index: 30!important;
+  }
+}
+@media only screen and (max-width: 969px) {
+
+.mapboxgl-popup {
+  position: absolute;
+  top: 42%!important;
+  //left: 110px;
+  width: 45%!important;
+  //height: 100%!important;
+  padding: 10px!important;
+  transform: translate(100%, -50%)!important;
+  z-index: 30!important;
+  }
+}
+
+
+.mapboxgl-ctrl-bottom-right{
+  z-index: 20!important;
+}
+
+
+.mapboxgl-popup-close-button{
+  background-color: $white!important;
+  border-radius: 50px!important;
+  margin: 12px;
+  font-size: 16px;
+  padding: 2px 8px 4px;
+
+}
+.mapboxgl-popup-close-button:hover {
+    background-color: $vf-blue!important;
+    color: $white
+}
+
+.mapboxgl-popup-content {
+  padding:0px!important;
+  border-radius: $popup-border-radius!important;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.4)!important;
+}

@@ -1,0 +1,22 @@
+<div class="banner">
+  <div class="banner__nav banner__nav--bottom">
+    {% include nav/site.html %}
+  </div>
+  <div class="banner__bg" style="background-image: url('{{site.img}}/pages/{{page.id}}/hero.jpg'); {{page.banner.opacity}}"></div>
+  <div class="banner__wrap">
+    {% if page.banner.content %}
+      {{page.banner.content | liquify}}
+    {% elsif layout.banner.content %}
+      {{layout.banner.content | liquify}}
+    {% else %}
+      <div class="container container--no-padding text--center">
+        {% if page.banner.title-sup %}<h2 class="h--sub">{{page.banner.title-sup}}</h2>{% endif %}
+        <div class="space--md"></div>
+        <h1 class="h--banner text--wide">{% if page.banner.title %}{{page.banner.title}}{% else %}{{page.title}}{% endif %}</h1>
+        <div class="space--md"></div>
+        {% if page.banner.title-sub %}<h2 class="h--sub">{{page.banner.title-sub}}</h2>{% endif %}
+      </div>
+    {% endif %}
+  </div>
+  <div class="site-nav__offset"></div>
+</div>
